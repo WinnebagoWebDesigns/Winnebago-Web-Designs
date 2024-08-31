@@ -21,6 +21,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
+    height: 50rem;
   }
   #hero-1946 .cs-content {
     /* set text align to left if content needs to be left aligned */
