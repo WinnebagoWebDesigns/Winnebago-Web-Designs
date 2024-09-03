@@ -6,9 +6,9 @@ module.exports = {
     "address": {
         "lineOne": "",
         "lineTwo": "",
-        "city": "",
-        "state": "",
-        "zip": "",
+        "city": "Larsen",
+        "state": "Wisconsin",
+        "zip": "54947",
         "country": "US",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },

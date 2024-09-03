@@ -9,18 +9,19 @@
     // Website colors
     :root {
         /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-        --primary: #0000b1;
+        --primary: #15337d;
         --primaryLight: #ffba43;
-        --secondary: #ffba43;
+        --secondary: #47bae4;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        --topperXLFontSize: clamp(1.5rem, 2.4vw, 1.6rem);
         /* 31px - 49px */
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-        --bodyFontSize: 1rem;
+        --bodyFontSize: 1.25rem;
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
@@ -28,6 +29,7 @@
     body {
         margin: 0;
         padding: 0;
+        font-family: "Lora", serif;
     }
     
     *, *:before, *:after {
@@ -35,15 +37,20 @@
         box-sizing: border-box;
     }
     .cs-topper {
-        font-size: var(--topperFontSize);
+        font-size: var(--topperXLFontSize);
         line-height: 1.2em;
         text-transform: uppercase;
         text-align: inherit;
         letter-spacing: .1em;
         font-weight: 700;
-        color: var(--primary);
+        color: var(--headerColor);
         margin-bottom: calc(4 / 16 * 1rem);
         display: block;
+    }
+
+    .cs-topper em {
+        color: var(--secondary);
+        font-style: normal;
     }
     
     .cs-title {
@@ -55,6 +62,11 @@
         margin: 0 0 calc(16 / 16 * 1rem) 0;
         color: var(--headerColor);
         position: relative;
+
+        & em {
+            color: var(--secondary);
+            font-style: normal;
+        }
     }
     
     .cs-text {
@@ -65,33 +77,50 @@
         max-width: calc(650 / 16 * 1rem);
         margin: 0;
         color: var(--bodyTextColor);
+        font-family: "Lora", serif;
     }
-    
+
     .cs-button-solid {
-        font-size: calc(16/16 * 1rem);
-        font-weight: 700;
+        font-size: calc(16 / 16 * 1rem);
+        text-align: center;
         /* 46px - 56px */
         line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-align: center;
+        width: calc(180 / 16 * 1rem);
         text-decoration: none;
-        min-width: calc(150/16 * 1rem);
+        font-weight: 700;
+        /* clips corners of the before element */
+        overflow: hidden;
         margin: 0;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        /* 32px - 48px */
-        padding: 0 clamp(2rem, 4vw, 3rem);
+        color: #ffffff;
+        padding: 0;
         background-color: var(--primary);
-        color: var(--bodyTextColorWhite);
         display: inline-block;
         position: relative;
         z-index: 1;
         transition: color 0.3s;
-        transition: background-color 0.3s;
         border-radius: 50px;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, var(--secondary), var(--primary));
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: #000;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 0.3s;
+        }
 
         &:hover {
-            background-color: #ff7300;
             color: #fff;
+            &:before {
+                width: 100%;
+            }
         }
     }
 }
@@ -114,7 +143,7 @@
         margin: 0;
         overflow-x: hidden;
         padding: 0;
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: "Poppins", "Lora", sans-serif;
         font-size: 100%;
         color: var(--bodyTextColor);
     }
@@ -177,33 +206,43 @@
     }
     // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-    /* roboto-regular - latin */
+    /* lora-regular - latin */
     @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Lora';
         font-style: normal;
-        font-family: "Roboto";
         font-weight: 400;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: url('/assets/fonts/lora-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* roboto-700 - latin */
+    
+    /* lora-700 - latin */
     @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Lora';
         font-style: normal;
-        font-family: "Roboto";
         font-weight: 700;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: url('/assets/fonts/lora-v35-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* roboto-900 - latin */
+  
+
+    /* poppins-regular - latin */
     @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Poppins';
         font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        font-weight: 400;
+        src: url('/assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
+    
+    /* poppins-900 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 900;
+        src: url('/assets/fonts/poppins-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+  
 }
 
 /* Reset Margins */
@@ -323,7 +362,7 @@
         box-sizing: border-box;
         padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
+        font-family: "Lora", serif;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
@@ -863,7 +902,7 @@
         box-sizing: border-box;
         padding: 0 calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
+        font-family: "Lora", serif;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
@@ -1216,7 +1255,7 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
     #footer {
-        background: #1c1c1c;
+        background: #ffffff;
         padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
         font-size: min(4vw, 1.2em);
 
@@ -1245,7 +1284,7 @@
                 width: 100%;
                 font-size: calc(14 / 16 * 1rem);
                 line-height: calc(27 / 14 * 1rem);
-                color: #fff;
+                color: #000;
                 text-align: center;
             }
         }
@@ -1271,13 +1310,14 @@
                         margin-bottom: calc(12 / 16 * 1rem);
                         list-style: none;
                         font-size: calc(18 / 16 * 1rem);
-                        color: #fff;
+                        color: #000;
 
                         a {
                             text-decoration: none;
                             line-height: calc(21 / 18 * 1em);
-                            color: #fff;
+                            color: #000;
                             transition: color 0.3s;
+
                             &:hover {
                                 color: var(--primary);
                             }
@@ -1290,7 +1330,7 @@
                         font-size: calc(18 / 16 * 1rem);
                         line-height: calc(21 / 18 * 1em);
                         font-weight: bold;
-                        color: #fff;
+                        color: #000;
 
                         &:before {
                             position: absolute;
@@ -1338,10 +1378,11 @@
             margin: auto;
             margin-top: calc(100 / 16 * 1rem);
             width: 96%;
-            font-size: calc(16 / 16 * 1rem);
+            font-size: calc(16 / 16 * 0.7rem);
             line-height: calc(36 / 16 * 1rem);
-            color: #fff;
+            color: #000;
             text-align: center;
+            font-family: "Lora", serif;
 
             a {
                 text-decoration: none;
@@ -1402,12 +1443,15 @@
                 margin: 0;
                 max-width: calc(769 / 16 * 1rem);
                 width: 96%;
-
+                
                 ul {
                     li {
+                        font-family: "Lora", serif;
+                        h2 {
+                            font-family: "Poppins", sans-serif;
+                        }
                         a {
                             position: relative;
-
                             &:before {
                                 position: absolute;
                                 bottom: calc(-3 / 16 * 1rem);

@@ -5,7 +5,7 @@
 <footer id="footer">
     <div class="container">
         <div class="left-section">
-            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/WWD_logo_text_white.svg" alt="logo" width="580" height="108"></a>
+            <a class="logo" href="/"><img loading="lazy" decoding="async" src="/assets/svgs/WWD_logo_text_black.svg" alt="logo" width="580" height="108"></a>
         </div>
         <div class="right-section">
             <div class="lists">
@@ -33,10 +33,11 @@
                     <li>
                         <h2>Services</h2>
                     </li>
-                    <li>Service1</li>
-                    <li>Service2</li>
-                    <li>Service4</li>
-                    <li>Service5</li>
+                    <li>Web Design</li>
+                    <li>Website Maintenance</li>
+                    <li>SEO Services</li>
+                    <li>Content Creation</li>
+                    <li>Logo Design</li>
                 </ul>
                 <ul>
                     <li>
@@ -44,10 +45,8 @@
                     </li>
                     <li>
                         <a href="/contact">
-                            {{client.address.lineOne}}<br>
-                            {{client.address.lineTwo}}<br>
-                            {{client.address.city}}
-                            {{client.address.state}}
+                            {{client.address.city}}, 
+                            {{client.address.state}} <br />
                             {{client.address.zip}}
                         </a>
                     </li>
@@ -66,9 +65,6 @@
     </div>
 
     <div class="credit">
-        <span>Designed and Hand Coded by</span>
-        <a href="/" target="_blank" rel="noopener">Winnebago Web Designs</a>
-        <span class="copyright">
-            Copyright {% year %} - Present</span>
+           Copyright © {% year %} - Present</span> | Winnebago Web Designs | All Rights Reserved
     </div>
 </footer>
