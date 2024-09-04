@@ -6,9 +6,6 @@
 @media only screen and (min-width: 0rem) {
   #hero-1203 {
     /** For mobile devices **/
-    /* 150px - 350px */
-    padding: clamp(9rem, 25.95vw, 21.875rem) 1rem;
-    padding-bottom: 0;
     position: relative;
     z-index: 1;
     /* prevents overflow from the arrow graphic */
@@ -16,12 +13,13 @@
   }
   #hero-1203 .custom-shape-divider-top-1725355554 {
     position: absolute;
-    top: 5.5rem;
+    top: 4.3rem;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    z-index: -1;
   }
   #hero-1203 .custom-shape-divider-top-1725355554 svg {
     position: relative;
@@ -36,7 +34,7 @@
 @media only screen and (min-width: 0rem) and (max-width: 767px) {
   #hero-1203 .custom-shape-divider-top-1725355554 svg {
     width: calc(300% + 1.3px);
-    height: 200px;
+    height: 500px;
   }
 }
 @media only screen and (min-width: 0rem) {
@@ -54,6 +52,8 @@
     left: 0;
   }
   #hero-1203 .cs-container {
+    /* 150px - 350px */
+    padding: clamp(9rem, 25.95vw, 21.875rem) 1rem;
     width: 100%;
     max-width: 80rem;
     margin: auto;

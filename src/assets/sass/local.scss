@@ -9,12 +9,13 @@
     #hero-1203 {
         .custom-shape-divider-top-1725355554 {
             position: absolute;
-            top: 5.5rem;
+            top: 4.3rem;
             left: 0;
             width: 100%;
             overflow: hidden;
             line-height: 0;
             transform: rotate(180deg);
+            z-index: -1;
         }
         
         .custom-shape-divider-top-1725355554 svg {
@@ -32,13 +33,10 @@
         @media (max-width: 767px) {
             .custom-shape-divider-top-1725355554 svg {
                 width: calc(300% + 1.3px);
-                height: 200px;
+                height: 500px;
             }
         }
         
-        /* 150px - 350px */
-        padding: clamp(9rem, 25.95vw, 21.875rem) calc(16 / 16 * 1rem);
-        padding-bottom: 0;
         position: relative;
         z-index: 1;
         /* prevents overflow from the arrow graphic */
@@ -59,6 +57,8 @@
         }
 
         .cs-container {
+            /* 150px - 350px */
+            padding: clamp(9rem, 25.95vw, 21.875rem) calc(16 / 16 * 1rem);
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
             margin: auto;
