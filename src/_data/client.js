@@ -10,7 +10,7 @@ module.exports = {
         "state": "Wisconsin",
         "zip": "54947",
         "country": "US",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "mapLink": "https://maps.app.goo.gl/WVEem9LHSb2HmQmR8"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",

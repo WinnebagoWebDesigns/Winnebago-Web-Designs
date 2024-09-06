@@ -5,39 +5,40 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-1203 {
-    /** For mobile devices **/
+    /*.custom-shape-divider-top-1725355554 {
+        position: absolute;
+        top: 4.3rem;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        z-index: -1;
+    }
+
+    .custom-shape-divider-top-1725355554 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 500px;
+    }
+
+    .custom-shape-divider-top-1725355554 .shape-fill {
+        fill: #47BAE4;
+    }
+
+     For mobile devices 
+    @media (max-width: 767px) {
+        .custom-shape-divider-top-1725355554 svg {
+            width: calc(300% + 1.3px);
+            height: 500px;
+        }
+    }*/
     position: relative;
     z-index: 1;
     /* prevents overflow from the arrow graphic */
     overflow: hidden;
   }
-  #hero-1203 .custom-shape-divider-top-1725355554 {
-    position: absolute;
-    top: 4.3rem;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    z-index: -1;
-  }
-  #hero-1203 .custom-shape-divider-top-1725355554 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 500px;
-  }
-  #hero-1203 .custom-shape-divider-top-1725355554 .shape-fill {
-    fill: #47BAE4;
-  }
-}
-@media only screen and (min-width: 0rem) and (max-width: 767px) {
-  #hero-1203 .custom-shape-divider-top-1725355554 svg {
-    width: calc(300% + 1.3px);
-    height: 500px;
-  }
-}
-@media only screen and (min-width: 0rem) {
   #hero-1203 .cs-container {
     /* 150px - 350px */
     padding: clamp(9rem, 25.95vw, 21.875rem) 1rem;
@@ -112,12 +113,12 @@
   }
   #hero-1203 .cs-floater {
     width: 59.6875rem;
-    height: auto;
+    height: 115%;
     opacity: 0.08;
     display: block;
     position: absolute;
     right: 0;
-    top: 30%;
+    top: 0;
     z-index: -2;
     border: 1px solid black;
     border-bottom: 200px solid transparent;
@@ -142,6 +143,7 @@
   }
   #hero-1203 .cs-floater {
     width: 164.8125rem;
+    height: 100%;
     top: 0;
     right: 0;
   }
@@ -166,137 +168,35 @@
     text-align: center;
   }
 }
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #services-1188 {
-    padding: var(--sectionPadding);
-  }
-  #services-1188 .cs-container {
-    max-width: 80rem;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(2rem, 6vw, 3rem);
-  }
-  #services-1188 .cs-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-  }
-  #services-1188 .cs-card-group {
-    /* changes to 1280px at desktop */
-    max-width: 56.25rem;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    justify-content: center;
-    gap: 1rem;
-  }
-  #services-1188 .cs-item {
-    list-style: none;
-    max-width: 23rem;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    padding: 1rem;
-    border: 1px solid #e8e8e8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-  #services-1188 .cs-picture {
-    /* prevents border from affecting height and width */
-    background-color: #f7f7f7;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    /* prevents flexbox from squishing it */
-    z-index: -1;
-    max-width: 100%;
-  }
-  #services-1188 .cs-icon {
-    width: 1.875rem;
-    height: auto;
-    display: block;
-  }
-  #services-1188 .cs-h3 {
-    font-size: 1.25rem;
-    line-height: 1.5em;
-    margin: 0;
-    margin-bottom: 0.5rem;
-    color: var(--headerColor);
-    text-align: center;
-  }
-  #services-1188 .cs-item-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    text-align: center;
-    font-family: "Lora", serif;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #services-1188 .cs-card-group {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-  #services-1188 .cs-item {
-    margin: 0;
-  }
-}
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #services-1188 .cs-card-group {
-    max-width: 80rem;
-  }
-  #services-1188 .cs-item {
-    max-width: none;
-    padding: 2rem 1.5rem;
-  }
-}
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs .cs-left:before, body.dark-mode #sbs .cs-left:after {
+  body.dark-mode #hero-1203 .cs-left:before, body.dark-mode #hero-1203 .cs-left:after {
     background: var(--accent);
   }
-  body.dark-mode #sbs .cs-picture2 {
+  body.dark-mode #hero-1203 .cs-picture2 {
     /* 6px - 12px */
     border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
     background-color: var(--dark);
   }
-  body.dark-mode #sbs .cs-topper {
+  body.dark-mode #hero-1203 .cs-topper {
     color: var(--primaryLight);
   }
-  body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
-  body.dark-mode #sbs .cs-name {
+  body.dark-mode #hero-1203 .cs-title,
+  body.dark-mode #hero-1203 .cs-sub-title,
+  body.dark-mode #hero-1203 .cs-text,
+  body.dark-mode #hero-1203 .cs-h3,
+  body.dark-mode #hero-1203 .cs-flex-p,
+  body.dark-mode #hero-1203 .cs-name {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs .cs-flex-group {
+  body.dark-mode #hero-1203 .cs-flex-group {
     background-color: var(--accent);
   }
-  body.dark-mode #sbs .cs-job {
+  body.dark-mode #hero-1203 .cs-job {
     opacity: 0.8;
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs .cs-quote-icon {
+  body.dark-mode #hero-1203 .cs-quote-icon {
     opacity: 0.2;
   }
 }
@@ -417,33 +317,40 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs-r .cs-left:before, body.dark-mode #sbs-r .cs-left:after {
+  body.dark-mode #why-choose-1662 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #why-choose-1662 .cs-left:before, body.dark-mode #why-choose-1662 .cs-left:after {
     background: var(--accent);
   }
-  body.dark-mode #sbs-r .cs-picture2 {
+  body.dark-mode #why-choose-1662 .cs-picture2 {
     /* 6px - 12px */
     border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
     background-color: var(--dark);
   }
-  body.dark-mode #sbs-r .cs-topper {
+  body.dark-mode #why-choose-1662 .cs-topper {
     color: var(--primaryLight);
   }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
+  body.dark-mode #why-choose-1662 .cs-title,
+  body.dark-mode #why-choose-1662 .cs-text,
+  body.dark-mode #why-choose-1662 .cs-h3,
+  body.dark-mode #why-choose-1662 .cs-flex-p,
+  body.dark-mode #why-choose-1662 .cs-name,
+  body.dark-mode #why-choose-1662 .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .cs-flex-group {
+  body.dark-mode #why-choose-1662 .cs-flex-group {
     background-color: var(--accent);
   }
-  body.dark-mode #sbs-r .cs-job {
+  body.dark-mode #why-choose-1662 .cs-job {
     opacity: 0.8;
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .cs-quote-icon {
+  body.dark-mode #why-choose-1662 .cs-quote-icon {
     opacity: 0.2;
+  }
+  body.dark-mode #why-choose-1662 .cs-item-number {
+    color: var(--secondary);
   }
 }
 /*-- -------------------------- -->
@@ -869,16 +776,19 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
+  body.dark-mode #meet-us-347 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #meet-us-347 .cs-title,
+  body.dark-mode #meet-us-347 .cs-text,
+  body.dark-mode #meet-us-347 .cs-item-p,
+  body.dark-mode #meet-us-347 .cs-reviewer {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #reviews .cs-item {
+  body.dark-mode #meet-us-347 .cs-item {
     background: var(--medium);
   }
-  body.dark-mode #reviews .cs-desc {
+  body.dark-mode #meet-us-347 .cs-desc {
     color: var(--primaryLight);
   }
 }
@@ -1316,7 +1226,7 @@
     /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
     margin-top: auto;
     width: 100%;
-    border-radius: 0;
+    border-radius: 50px;
   }
   #pricing-1087 .cs-price-button:before {
     border-radius: 0;
@@ -1349,6 +1259,31 @@
   #pricing-1087 .cs-option2 {
     top: auto;
     bottom: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #pricing-1087 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #pricing-1087 .cs-title,
+  body.dark-mode #pricing-1087 .cs-text,
+  body.dark-mode #pricing-1087 .cs-item-p,
+  body.dark-mode #pricing-1087 .cs-reviewer,
+  body.dark-mode #pricing-1087 .cs-package,
+  body.dark-mode #pricing-1087 .cs-price,
+  body.dark-mode #pricing-1087 .cs-li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #pricing-1087 .cs-item {
+    background: var(--medium);
+  }
+  body.dark-mode #pricing-1087 .cs-desc {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #pricing-1087 .cs-popular {
+    background-color: #000;
+    color: #1a1a1a;
   }
 }
 

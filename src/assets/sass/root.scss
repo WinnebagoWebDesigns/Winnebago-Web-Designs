@@ -14,7 +14,7 @@
         --secondary: #47bae4;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
-        --bodyTextColor: #000;//#4e4b66;
+        --bodyTextColor: #4e4b66;
         --bodyTextColorWhite: #fafbfc;
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -619,7 +619,7 @@
 
             .cs-logo {
                 /* makes it white */
-                filter: grayscale(1) brightness(1000%);
+                filter: brightness(0) invert(1);
             }
 
             .cs-line {
@@ -1002,8 +1002,8 @@
             background-color: var(--dark);
 
             .cs-logo {
-                /* makes it turn white */
-                filter: grayscale(1) brightness(1000%);
+                /* makes it white */
+                filter: brightness(0) invert(1);
             }
 
             .cs-li-link {
@@ -1348,7 +1348,7 @@
                     &:nth-of-type(3) {
                         margin-top: calc(50 / 16 * 1rem);
                         li {
-                            display: flex;
+                            //display: flex;
                             justify-content: flex-start;
                             align-items: center;
                             margin-bottom: calc(16 / 16 * 1rem);
@@ -1474,7 +1474,6 @@
                     }
                     &:nth-of-type(3) {
                         margin-top: 0;
-
                         li:first-of-type {
                             margin-bottom: 0;
                         }
@@ -1500,6 +1499,41 @@
     body.dark-mode {
         #footer {
             background: #061623;
+            .lists {
+                h2 {
+                    color: var(--bodyTextColorWhite);
+                }
+                li {
+                    color: var(--bodyTextColorWhite);
+                }
+                ul {
+                    a {
+                        color: var(--bodyTextColorWhite);
+
+                        &:before {
+                            background:var(--secondary);
+                        }
+
+                        &:hover {
+                            color:var(--secondary);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        li:first-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .credit {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .logo {
+               filter: invert(1);
+            }
         }
     }
 }

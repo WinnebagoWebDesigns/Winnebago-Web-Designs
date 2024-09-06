@@ -11,7 +11,7 @@
     --secondary: #47bae4;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #000;
+    --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -530,7 +530,7 @@
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
-    filter: grayscale(1) brightness(1000%);
+    filter: brightness(0) invert(1);
   }
   body.dark-mode #cs-navigation .cs-line {
     background-color: #fff;
@@ -846,8 +846,8 @@
     background-color: var(--dark);
   }
   body.dark-mode #cs-navigation .cs-logo {
-    /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
+    /* makes it white */
+    filter: brightness(0) invert(1);
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
@@ -1153,7 +1153,6 @@
     margin-top: 3.125rem;
   }
   #footer .right-section .lists ul:nth-of-type(3) li {
-    display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 1rem;
@@ -1274,6 +1273,30 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
     background: #061623;
+  }
+  body.dark-mode #footer .lists h2 {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists li {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists ul a {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .lists ul a:before {
+    background: var(--secondary);
+  }
+  body.dark-mode #footer .lists ul a:hover {
+    color: var(--secondary);
+  }
+  body.dark-mode #footer .lists ul:nth-of-type(3) li:first-of-type {
+    margin-bottom: 0;
+  }
+  body.dark-mode #footer .credit {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #footer .logo {
+    filter: invert(1);
   }
 }
 

@@ -7,7 +7,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #hero-1203 {
-        .custom-shape-divider-top-1725355554 {
+        /*.custom-shape-divider-top-1725355554 {
             position: absolute;
             top: 4.3rem;
             left: 0;
@@ -29,13 +29,13 @@
             fill: #47BAE4;
         }
         
-        /** For mobile devices **/
+         For mobile devices 
         @media (max-width: 767px) {
             .custom-shape-divider-top-1725355554 svg {
                 width: calc(300% + 1.3px);
                 height: 500px;
             }
-        }
+        }*/
         
         position: relative;
         z-index: 1;
@@ -122,12 +122,12 @@
 
         .cs-floater {
             width: calc(955 / 16 * 1rem);
-            height: auto;
+            height: 115%;
             opacity: 0.08;
             display: block;
             position: absolute;
             right: 0;
-            top: 30%;
+            top: 0;
             z-index: -2;
             border:1px solid black;
             border-bottom: 200px solid transparent;
@@ -157,6 +157,7 @@
 
         .cs-floater {
             width: calc(1465 / 16 * 1.8rem);
+            height: 100%;
             top: 0;
             right: 0;
         }
@@ -194,123 +195,10 @@
     }
 }
 
-
-/*-- -------------------------- -->
-<---          Services          -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #services-1188 {
-        padding: var(--sectionPadding);
-    }
-    #services-1188 .cs-container {
-        max-width: 80rem;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* 48px - 64px */
-        gap: clamp(2rem, 6vw, 3rem);
-    }
-    #services-1188 .cs-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: center;
-        /* set text align to left if content needs to be left aligned */
-        text-align: center;
-    }
-
-    #services-1188 .cs-card-group {
-        /* changes to 1280px at desktop */
-        max-width: 56.25rem;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        justify-content: center;
-        gap: 1rem;
-    }
-    #services-1188 .cs-item {
-        list-style: none;
-        max-width: 23rem;
-        width: 100%;
-        margin: 0;
-        box-sizing: border-box;
-        padding: 1rem;
-        border: 1px solid #e8e8e8;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
-    }
-    #services-1188 .cs-picture {
-        //width: 5rem;
-        //height: 5rem;
-        //margin-bottom: 1.25rem;
-        //box-sizing: border-box;
-        /* prevents border from affecting height and width */
-        background-color: #f7f7f7;
-        border-radius: 50%;
-        //display: flex;
-        justify-content: center;
-        align-items: center;
-        //position: relative;
-        /* prevents flexbox from squishing it */
-        //flex: none;
-        z-index: -1;
-        max-width: 100%;
-    }
-    #services-1188 .cs-icon {
-        width: 1.875rem;
-        height: auto;
-        display: block;
-    }
-    #services-1188 .cs-h3 {
-        font-size: 1.25rem;
-        line-height: 1.5em;
-        margin: 0;
-        margin-bottom: 0.5rem;
-        color: var(--headerColor);
-        text-align: center;
-    }
-    #services-1188 .cs-item-text {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        line-height: 1.5em;
-        margin: 0;
-        color: var(--bodyTextColor);
-        text-align: center;
-        font-family: "Lora", serif;
-    }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #services-1188 .cs-card-group {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
-    }
-    #services-1188 .cs-item {
-        margin: 0;
-    }
-}
-/* Large Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #services-1188 .cs-card-group {
-        max-width: 80rem;
-    }
-    #services-1188 .cs-item {
-        max-width: none;
-        padding: 2rem 1.5rem;
-    }
-}
-
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #sbs {
+        #hero-1203 {
             .cs-left {
                 &:before,
                 &:after {
@@ -329,6 +217,7 @@
             }
 
             .cs-title,
+            .cs-sub-title,
             .cs-text,
             .cs-h3,
             .cs-flex-p,
@@ -474,7 +363,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #sbs-r {
+        #why-choose-1662 {
+            background-color: var(--dark);
             .cs-left {
                 &:before,
                 &:after {
@@ -496,7 +386,8 @@
             .cs-text,
             .cs-h3,
             .cs-flex-p,
-            .cs-name {
+            .cs-name,
+            .cs-item-text {
                 color: var(--bodyTextColorWhite);
             }
 
@@ -511,6 +402,10 @@
 
             .cs-quote-icon {
                 opacity: 0.2;
+            }
+
+            .cs-item-number {
+                color: var(--secondary);
             }
         }
     }
@@ -953,7 +848,8 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #reviews {
+        #meet-us-347 {
+            background-color: var(--dark);
             .cs-title,
             .cs-text,
             .cs-item-p,
@@ -1419,7 +1315,7 @@
         /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
         margin-top: auto;
         width: 100%;
-        border-radius: 0;
+        border-radius: 50px;
     }
     #pricing-1087 .cs-price-button:before {
         border-radius: 0;
@@ -1452,5 +1348,36 @@
     #pricing-1087 .cs-option2 {
         top: auto;
         bottom: 0;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-1087 {
+            background-color: var(--dark);
+            .cs-title,
+            .cs-text,
+            .cs-item-p,
+            .cs-reviewer,
+            .cs-package,
+            .cs-price,
+            .cs-li {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item {
+                background: var(--medium);
+            }
+
+            .cs-desc {
+                color: var(--primaryLight);
+            }
+
+            .cs-popular {
+                background-color: #000;
+                color: #1a1a1a;
+            }
+        }
     }
 }
