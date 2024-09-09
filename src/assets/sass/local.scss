@@ -213,7 +213,7 @@
             }
 
             .cs-topper {
-                color: var(--primaryLight);
+                color: var(--secondary);
             }
 
             .cs-title,
@@ -236,6 +236,16 @@
 
             .cs-quote-icon {
                 opacity: 0.2;
+            }
+
+            .cs-button-solid {
+                &:before {
+                    background: #fff;
+                }
+        
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }
@@ -379,7 +389,7 @@
             }
 
             .cs-topper {
-                color: var(--primaryLight);
+                color: var(--secondary);
             }
 
             .cs-title,
@@ -443,7 +453,7 @@
 
     #gallery-1152 .cs-title {
         margin: 0;
-
+        
         & em {
             color: var(--secondary);
         }
@@ -503,7 +513,7 @@
         grid-template-columns: repeat(5, 1fr);
     }
     #gallery-1152 .cs-image {
-        grid-column: span 1;
+        grid-column: span 2;
     }
     #gallery-1152 .cs-image:nth-of-type(4),
     #gallery-1152 .cs-image:nth-of-type(5) {
@@ -605,7 +615,7 @@
         opacity: 0.9;
     }
     #meet-us-347 .cs-item:hover .cs-name {
-        color: var(--secondaryLight);
+        color: var(--primary);
     }
     #meet-us-347 .cs-info {
         padding: 0.75rem 1rem;
@@ -662,13 +672,13 @@
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {
     #meet-us-347 .cs-content {
-        text-align: left;
+        text-align: center;
         width: 100%;
         /* makes it match the max-width of the card group */
         max-width: 44.25rem;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
     }
     #meet-us-347 .cs-title {
         margin: 0;
@@ -686,10 +696,11 @@
 @media only screen and (min-width: 64rem) {
     #meet-us-347 .cs-content {
         max-width: 100%;
+        align-items: center;
     }
     #meet-us-347 .cs-card-group {
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content:last baseline;
     }
     #meet-us-347 .cs-item {
         /* stretch the list items as far as they can go, and the gap property on the parent will space them apart */
@@ -821,6 +832,7 @@
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
     }
+
     @keyframes floatAnimation {
         0% {
             transform: translateY(0);
@@ -862,7 +874,17 @@
             }
 
             .cs-desc {
-                color: var(--primaryLight);
+                color: var(--secondary);
+            }
+
+            .cs-button-solid {
+                &:before {
+                    background: #fff;
+                }
+        
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }
@@ -1317,8 +1339,38 @@
         width: 100%;
         border-radius: 50px;
     }
+
     #pricing-1087 .cs-price-button:before {
         border-radius: 0;
+    }
+
+    #pricing-1087 .cs-price-button-popular {
+        /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
+        margin-top: auto;
+        width: 100%;
+        border-radius: 50px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: #fff;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 0.3s;
+            border-radius: 0;
+        }
+
+        &:hover {
+            color: #000;
+            &:before {
+                width: 100%;
+            }
+        }
     }
     #pricing-1087 .cs-floater {
         /* 76PX - 121PX */
@@ -1371,12 +1423,22 @@
             }
 
             .cs-desc {
-                color: var(--primaryLight);
+                color: var(--secondary);
             }
 
             .cs-popular {
                 background-color: #000;
                 color: #1a1a1a;
+            }
+
+            .cs-button-solid {
+                &:before {
+                    background: #fff;
+                }
+        
+                &:hover {
+                    color: #000;
+                }
             }
         }
     }

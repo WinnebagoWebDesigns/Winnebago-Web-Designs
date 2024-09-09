@@ -1012,7 +1012,17 @@
 
             .cs-li-link {
                 &:before {
-                    background-color: var(--primaryLight);
+                    background-color: var(--secondary);
+                }
+            }
+
+            .cs-button-solid {
+                &:before {
+                    background: #fff;
+                }
+        
+                &:hover {
+                    color: #000;
                 }
             }
         }

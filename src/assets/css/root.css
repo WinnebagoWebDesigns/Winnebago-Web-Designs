@@ -853,7 +853,13 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #cs-navigation .cs-li-link:before {
-    background-color: var(--primaryLight);
+    background-color: var(--secondary);
+  }
+  body.dark-mode #cs-navigation .cs-button-solid:before {
+    background: #fff;
+  }
+  body.dark-mode #cs-navigation .cs-button-solid:hover {
+    color: #000;
   }
 }
 /*-- -------------------------- -->
