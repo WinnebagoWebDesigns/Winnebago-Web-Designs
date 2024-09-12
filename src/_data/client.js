@@ -1,8 +1,8 @@
 module.exports = {
-    "name": "Winnebago Web Designs",
+    "name": "Winnebago Web Designs LLC",
     "email": "rudy@winnebagowebdesigns.com",
-    "phoneForTel": "612-396-5785",
-    "phoneFormatted": "(612) 396-5785",
+    "phoneForTel": "920-241-6154",
+    "phoneFormatted": "(920) 241-6154",
     "address": {
         "lineOne": "",
         "lineTwo": "",
